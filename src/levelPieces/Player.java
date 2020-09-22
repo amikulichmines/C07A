@@ -1,6 +1,10 @@
-package gameEngine;
+package levelPieces;
 
 import java.util.Scanner;
+import gameEngine.Moveable;
+import gameEngine.Drawable;
+import gameEngine.GameEngine;
+import gameEngine.InteractionResult;
 
 /**
  * The actual game player Keeps track of player status (location, hit points,
@@ -10,7 +14,7 @@ import java.util.Scanner;
  * @author Cyndi Rader
  *
  */
-public class Player implements Drawable {
+public class Player extends GamePiece implements Moveable, Drawable {
 
 	/**
 	 * The number of hits that can be taken before death.
@@ -45,6 +49,7 @@ public class Player implements Drawable {
 	 * @param location location the player starts at
 	 */
 	public Player(int location) {
+		super('P', "Player", location);
 		// always reset status when create player or start new level
 		resetLevel(location);
 	}
@@ -216,9 +221,18 @@ public class Player implements Drawable {
 	 * 
 	 * Draws the player
 	 */
-	@Override
 	public void draw() {
 		System.out.print(symbol);
+	}
+
+	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Drawable[] move(Drawable[] gameBoard, int playerLocation) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

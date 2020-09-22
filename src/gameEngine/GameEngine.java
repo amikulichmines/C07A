@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import levelPieces.GamePiece;
 import levelPieces.LevelSetup;
+import levelPieces.Player;
 
 /**
  * Framework for LevelGame.
@@ -167,7 +168,7 @@ public class GameEngine {
 	 */
 	public void movePieces() {
 		for (Moveable piece : movingPieces) {
-			piece.move(gameBoard, player.getLocation());
+			gameBoard = piece.move(gameBoard, player.getLocation()); //set gameboard equal to this and have .move return gameboard
 		}
 	}
 
@@ -196,7 +197,7 @@ public class GameEngine {
 			}
 			if (result == InteractionResult.KILL) {
 				player.killed();
-				System.out.println("\nKerPolp! Something just killed you!\n");
+				System.out.println("\nKerPlop! Something just killed you!\n");
 				// can only be killed once
 				break;
 			}

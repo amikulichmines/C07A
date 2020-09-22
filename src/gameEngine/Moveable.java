@@ -25,5 +25,5 @@ public interface Moveable{
 	 * @param playerLocation players current location on board
 	 * 
 	 */
-	public void move(Drawable[] gameBoard, int playerLocation);
+	public Drawable[] move(Drawable[] gameBoard, int playerLocation);
 }
