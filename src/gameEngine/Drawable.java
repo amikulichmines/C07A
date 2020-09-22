@@ -8,7 +8,8 @@ package gameEngine;
  * @author Chantal Wang
  * 
  */
-public interface Drawable {
+public interface Drawable { //interface that is implemented by other classes 
+	//so they can use the draw function
 	public void draw();
 	
 }

@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import gameEngine.Moveable;
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
+//authors Alex Mikulich and Chantal Wang
 
 public class LevelSetup {
 	Drawable[] drawableArray = {}; //creating all the arrays we will need to fill

@@ -7,7 +7,7 @@ package gameEngine;
  * @author Cyndi Rader
  * 
  */
-public enum InteractionResult {
+public enum InteractionResult { //enum class that lists possible interactions
 	HIT, KILL, ADVANCE, GET_POINT, NONE;
 	
 }

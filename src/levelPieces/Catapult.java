@@ -12,24 +12,24 @@ public class Catapult extends GamePiece implements Drawable {
 	int _target = 0;
 	int _location = 0;
 	
-	public Catapult(int newLocation) {
+	public Catapult(int newLocation) { //catapult constructor
 		super('C', "Catapult", newLocation);
 		this._location = newLocation;
 	}
 	
-	public void draw() {
+	public void draw() { //draws catapult symbol
 		System.out.print("C");
 	}
 	
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		_target = _take_a_pot_shot();
+		_target = _take_a_pot_shot(); //sets where the shot is landing
 		if (playerLocation == _target) {
-			return InteractionResult.HIT;
+			return InteractionResult.HIT; //hits the player if it lands on them
 		}
 		return InteractionResult.NONE;
 	}
 	
-	private int _take_a_pot_shot() {
+	private int _take_a_pot_shot() { //randomly launches somewhere within four spaces
 		Random rand = new Random();
 		int randomSpot = rand.nextInt(4);
 		if (randomSpot == 0) {

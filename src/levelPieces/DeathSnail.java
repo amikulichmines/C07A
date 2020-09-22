@@ -11,15 +11,15 @@ public class DeathSnail extends GamePiece implements Moveable, Drawable {
 	
 	
 	
-	public DeathSnail(int newLocation) {
+	public DeathSnail(int newLocation) { //death snail constructor
 		super('D', "Death Snail", newLocation);
 		this._location = newLocation;
 	}
 
-	public Drawable[] move(Drawable[] gameBoard, int playerLocation) {
-		if (_count%2 == 0) {
+	public Drawable[] move(Drawable[] gameBoard, int playerLocation) { 
+		if (_count%2 == 0) { //makes sure death snail moves slowly (every other turn)
 			newGameboard = gameBoard;
-			if (playerLocation < _location) {
+			if (playerLocation < _location) { //moves towards the player
 				_move_left();
 			}
 			if (playerLocation > _location) {
@@ -32,22 +32,22 @@ public class DeathSnail extends GamePiece implements Moveable, Drawable {
 	
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 		if (playerLocation == _location) {
-			return InteractionResult.KILL;
+			return InteractionResult.KILL; //kills player if it lands on them
 		}
 		return InteractionResult.NONE;
 	}
 	
-	private void _move_left() {
+	private void _move_left() { //moves snail to the left on the gameboard
 		if (_location != 0) {
 			if (newGameboard[_location-1] == null) {
 				newGameboard[_location-1] = newGameboard[_location];
-				newGameboard[_location] = null;
+				newGameboard[_location] = null; //deletes old snail icon
 				_location--;
 			}
 		}
 	}
 	
-	private void _move_right() {
+	private void _move_right() { //moves snail to the right on the gameboard
 		if (_location != newGameboard.length-1) {
 			if (newGameboard[_location+1] == null) {
 				newGameboard[_location+1] = newGameboard[_location];
@@ -57,14 +57,11 @@ public class DeathSnail extends GamePiece implements Moveable, Drawable {
 		}
 	}
 	
-	public void draw() {
+	public void draw() { //draws snail in its position
 		System.out.print("D");
 	}
 	
-	private void set_location(int _location) {
-		this._location = _location;
-	}
-	
+
 	
 	
 }
