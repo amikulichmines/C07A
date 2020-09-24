@@ -37,7 +37,7 @@ public class DeathSnail extends GamePiece implements Moveable, Drawable {
 		return InteractionResult.NONE;
 	}
 	
-	private void _move_left() { //moves snail to the left on the gameboard
+	public void _move_left() { //moves snail to the left on the gameboard
 		if (_location != 0) {
 			if (newGameboard[_location-1] == null) {
 				newGameboard[_location-1] = newGameboard[_location];
@@ -47,7 +47,7 @@ public class DeathSnail extends GamePiece implements Moveable, Drawable {
 		}
 	}
 	
-	private void _move_right() { //moves snail to the right on the gameboard
+	public void _move_right() { //moves snail to the right on the gameboard
 		if (_location != newGameboard.length-1) {
 			if (newGameboard[_location+1] == null) {
 				newGameboard[_location+1] = newGameboard[_location];
@@ -61,6 +61,9 @@ public class DeathSnail extends GamePiece implements Moveable, Drawable {
 		System.out.print("D");
 	}
 	
+	public int getLocation() {
+		return _location;
+	}
 
 	
 	

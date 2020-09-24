@@ -1,0 +1,68 @@
+
+Note: we used Faros to pair program, so Chantal did not have to pull the project to 
+her computer
+
+commit e14511b80e74d39a516228ba02b08cd17becce1a
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Mon Sep 21 22:35:49 2020 -0600
+
+    Finished the project via Saros pair programming
+
+commit 7b37695aa268c62700cf2add242a0524a56349c7
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Sun Sep 20 20:09:47 2020 -0600
+
+    Pushed to github
+
+commit 3691f41aed70d0613833f3e0f4c1fcebe31fca00
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Sun Sep 20 20:05:14 2020 -0600
+
+    Created GamePiece interface and edited the LevelSetup class
+
+commit c3e99d36f12e63197a4b9c5d393c0e16eefbc03d
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Tue Sep 15 18:13:34 2020 -0600
+
+    Created new branch 'develop'
+
+commit de977d34e33b1d2fca5345d5a843ae91bb24c670
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Tue Sep 15 17:24:48 2020 -0600
+
+    Created repository
+commit ea01774c36f5869a59bab9347727d961ba19245e
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Mon Sep 21 23:52:24 2020 -0600
+
+    finished project
+
+commit e14511b80e74d39a516228ba02b08cd17becce1a
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Mon Sep 21 22:35:49 2020 -0600
+
+    Finished the project via Saros pair programming
+
+commit 7b37695aa268c62700cf2add242a0524a56349c7
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Sun Sep 20 20:09:47 2020 -0600
+
+    Pushed to github
+
+commit 3691f41aed70d0613833f3e0f4c1fcebe31fca00
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Sun Sep 20 20:05:14 2020 -0600
+
+    Created GamePiece interface and edited the LevelSetup class
+
+commit c3e99d36f12e63197a4b9c5d393c0e16eefbc03d
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Tue Sep 15 18:13:34 2020 -0600
+
+    Created new branch 'develop'
+
+commit de977d34e33b1d2fca5345d5a843ae91bb24c670
+Author: amikulichmines <amikulich@mymail.mines.edu>
+Date:   Tue Sep 15 17:24:48 2020 -0600
+
+    Created repository
