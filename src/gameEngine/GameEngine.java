@@ -6,14 +6,12 @@ import levelPieces.GamePiece;
 import levelPieces.LevelSetup;
 import levelPieces.Player;
 
+
 /**
  * Framework for LevelGame.
  * 
  * @author Mark Baldwin
  * @author Cyndi Rader
- * 
- * 
- *
  */
 
 public class GameEngine {
@@ -49,6 +47,7 @@ public class GameEngine {
 	 * @param args Unused
 	 */
 	public static void main(String[] args) {
+		
 		GameEngine game = new GameEngine();
 		game.playGame();
 	}

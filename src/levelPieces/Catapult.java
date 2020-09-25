@@ -22,14 +22,14 @@ public class Catapult extends GamePiece implements Drawable {
 	}
 	
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		_target = _take_a_pot_shot(); //sets where the shot is landing
+		_target = take_a_pot_shot(); //sets where the shot is landing
 		if (playerLocation == _target) {
 			return InteractionResult.HIT; //hits the player if it lands on them
 		}
 		return InteractionResult.NONE;
 	}
 	
-	private int _take_a_pot_shot() { //randomly launches somewhere within four spaces
+	public int take_a_pot_shot() { //randomly launches somewhere within four spaces
 		Random rand = new Random();
 		int randomSpot = rand.nextInt(4);
 		if (randomSpot == 0) {
@@ -42,7 +42,7 @@ public class Catapult extends GamePiece implements Drawable {
 			return _location + 3;
 		}
 		if (randomSpot == 3) {
-			return _location + 3;
+			return _location + 4;
 		}
 		return 0; // Won't return 0, since the above return statements will do it.
 	}

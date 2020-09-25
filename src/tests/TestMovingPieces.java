@@ -1,15 +1,24 @@
-package gameEngine;
+package tests;
 import static org.junit.Assert.fail;
 
+import gameEngine.Drawable;
+import gameEngine.GameEngine;
 import levelPieces.*;
 
-public class TestMovingPieces {
-	public TestMovingPieces() {
-		testDeathSnailMovement();
-		testAssassinMovement();
-	}
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import gameEngine.Drawable;
+import gameEngine.GameEngine;
+import gameEngine.InteractionResult;
+import levelPieces.Assassin;
+
+ class TestMovingPieces {
 	
 	
+	@Test
 	public void testDeathSnailMovement() {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		int[] locations = {3, 10, 17};
@@ -29,7 +38,7 @@ public class TestMovingPieces {
 		assert(Deathsnail1.getLocation() == 9);
 	}
 	
-	
+	@Test
 	public void testAssassinMovement() {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		for (int i=1;i<=5; i++)
@@ -49,7 +58,7 @@ public class TestMovingPieces {
 		int count12 = 0;
 		int count20 = 0;
 		for (int i=0; i<200; i++) {
-			Assassin1.move(gameBoard, 13);
+			gameBoard = Assassin1.move(gameBoard, 13);
 			int loc = Assassin1.getLocation();
 			// ensure no other space is chosen
 			if (loc != 0 && loc != 6 && loc != 12 && loc != 20)
@@ -61,10 +70,10 @@ public class TestMovingPieces {
 			if (loc == 20) count20++;
 		}
 		// Ensure each option is randomly chosen some number of times. 
-		assert(count0 > 1);
-		assert(count6 > 1);
-		assert(count12 > 1);
-		assert(count20 > 1);		
+		assert(count0 > 0);
+		assert(count6 > 0);
+		assert(count12 > 0);
+		assert(count20 > 0);		
 	}
 	
-}
+ }

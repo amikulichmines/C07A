@@ -35,6 +35,10 @@ public class Assassin extends GamePiece implements Moveable, Drawable {
 		System.out.print("A");
 	}
 	
+	public int getLocation() {
+		return location_;
+	}
+	
 	public InteractionResult interact(Drawable[] newGameBoard, int playerLocation) {
 		if(playerLocation == this.location_) {
 			System.out.println("Assassin strikes!");
