@@ -56,23 +56,26 @@ import levelPieces.Assassin;
 		int count0 = 0;
 		int count6 = 0;
 		int count12 = 0;
+		int count13 =0;
 		int count20 = 0;
 		for (int i=0; i<200; i++) {
 			gameBoard = Assassin1.move(gameBoard, 13);
 			int loc = Assassin1.getLocation();
 			// ensure no other space is chosen
-			if (loc != 0 && loc != 6 && loc != 12 && loc != 20)
-				fail("Invalid square selected");
+			if (loc != 0 && loc != 6 && loc != 12 && loc != 20 && loc !=13) {
+				fail("Invalid square selected");}
 			// counters to ensure every valid option is chosen
 			if (loc == 0) count0++;
 			if (loc == 6) count6++;
 			if (loc == 12) count12++;
+			if (loc == 13) count13++;
 			if (loc == 20) count20++;
 		}
 		// Ensure each option is randomly chosen some number of times. 
 		assert(count0 > 0);
 		assert(count6 > 0);
 		assert(count12 > 0);
+		assert(count13 > 0);
 		assert(count20 > 0);		
 	}
 	
